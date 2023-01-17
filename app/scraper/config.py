@@ -2,7 +2,7 @@ from typing import Tuple
 
 from playwright.sync_api import Browser, BrowserContext, Page, Playwright
 
-from scraper.consts import BASE_URL
+from app.scraper.consts import BASE_URL
 
 
 def setup_playwright(

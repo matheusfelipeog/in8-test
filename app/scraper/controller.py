@@ -3,8 +3,8 @@ from pprint import pprint
 from playwright.sync_api import sync_playwright
 from playwright.sync_api import Page
 
-from scraper.config import setup_playwright, teardown_playwright
-from scraper.parser import (
+from app.scraper.config import setup_playwright, teardown_playwright
+from app.scraper.parser import (
     url_products,
     product_card,
     product_id,
@@ -15,7 +15,7 @@ from scraper.parser import (
     product_reviews,
     product_rating
 )
-from scraper.utils import order_products, ProductsSorted
+from app.scraper.utils import order_products, ProductsSorted
 
 
 def scraper(page: Page) -> ProductsSorted:

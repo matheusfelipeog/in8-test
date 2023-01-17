@@ -2,7 +2,7 @@ from typing import Dict, List, Union
 
 from playwright.sync_api import Page, Locator
 
-from scraper.consts import BASE_URL
+from app.scraper.consts import BASE_URL
 
 
 def url_products(page: Page, brand: str = 'lenovo') -> List[str]:
