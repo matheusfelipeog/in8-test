@@ -1,3 +1,5 @@
+from pprint import pprint
+
 from playwright.sync_api import sync_playwright
 from playwright.sync_api import Page
 
@@ -50,6 +52,6 @@ def run() -> None:
 
         browser, context, page = setup_playwright(playwright)
 
-        scraper(page)
+        pprint(scraper(page), indent=4)
 
         teardown_playwright(browser, context, page)
