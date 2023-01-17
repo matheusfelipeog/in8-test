@@ -1,5 +1,3 @@
-from pprint import pprint
-
 from playwright.sync_api import Page
 from playwright.sync_api import sync_playwright
 
@@ -15,10 +13,10 @@ from app.scraper.parser import (
     product_reviews,
     product_rating
 )
-from app.scraper.utils import order_products, ProductsSorted
+from app.scraper.utils import order_products, Products
 
 
-def scraper(page: Page) -> ProductsSorted:
+def scraper(page: Page) -> Products:
 
     page.goto('test-sites/e-commerce/allinone/computers/laptops')
 
@@ -47,11 +45,13 @@ def scraper(page: Page) -> ProductsSorted:
     return products
 
 
-def run() -> None:
+def run() -> Products:
+    data = []
     with sync_playwright() as playwright:
 
         browser, context, page = setup_playwright(playwright)
 
-        pprint(scraper(page), indent=4)
+        data = scraper(page)
 
         teardown_playwright(browser, context, page)
+    return data
