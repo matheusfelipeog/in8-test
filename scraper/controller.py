@@ -29,7 +29,8 @@ def scraper(page: Page) -> ProductsSorted:
 
         infos = product_hard_drives_price(card)
         desc = product_description(card)
-        product = {
+
+        products.append({
             'id': product_id(page),
             'name': product_name(card),
             'description': desc,
@@ -38,9 +39,7 @@ def scraper(page: Page) -> ProductsSorted:
             'url_image': product_url_image(card),
             'reviews': product_reviews(card),
             'rating': product_rating(card),
-        }
-
-        products.append(product)
+        })
 
     products = order_products(products)
     return products
