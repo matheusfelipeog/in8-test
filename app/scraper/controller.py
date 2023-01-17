@@ -1,7 +1,7 @@
 from pprint import pprint
 
-from playwright.sync_api import sync_playwright
 from playwright.sync_api import Page
+from playwright.sync_api import sync_playwright
 
 from app.scraper.config import setup_playwright, teardown_playwright
 from app.scraper.parser import (
