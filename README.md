@@ -46,7 +46,7 @@ playwright install && playwright install-deps
 
 ## Start
 
-Para executar apenas o scraper, sem iniciar a API, use o script:
+Para executar apenas o scraper, sem iniciar a API, use o script `only_scraper.py`:
 
 ```bash
 python only_scraper.py
