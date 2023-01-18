@@ -46,7 +46,17 @@ playwright install && playwright install-deps
 
 ## Start
 
-Inicie a API usando `gunicorn`:
+Para executar apenas o scraper, sem iniciar a API, use o script:
+
+```bash
+python only_scraper.py
+```
+
+Será mostrado no terminal todos os dados coletados no formato de uma lista de dicionários de dados.
+
+---
+
+Para iniciar a API, use o `gunicorn`:
 
 ```bash
 gunicorn --workers=2 'app:create_app()'
