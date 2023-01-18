@@ -15,6 +15,7 @@ def create_app() -> Flask:
             'status': 'alive',
             'docs': 'https://github.com/matheusfelipeog/in8-test#readme',
             'routes': [
+                'GET /api/',
                 'GET /api/products',
                 'GET /api/products/<int:product_id>'
             ]

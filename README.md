@@ -72,6 +72,14 @@ Acesse http://127.0.0.1:5000 se iniciou com `flask`
 
 As rotas disponíveis para acesso aos dados pela API:
 
+- **GET /**
+
+    Retorna um objeto contendo o status, link para a documentação e as rotas disponíveis.
+
+- **GET /api/**
+
+    Retorna um objeto contendo as rotas disponíveis.
+
 - **GET /api/products**
 
     Retorna uma lista de objetos contendo todos os produtos coletados e armazenados.
