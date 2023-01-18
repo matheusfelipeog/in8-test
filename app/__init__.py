@@ -11,7 +11,14 @@ def create_app() -> Flask:
 
     @app.route('/')
     def index():
-        return {'status': 'alive'}
+        return {
+            'status': 'alive',
+            'docs': 'https://github.com/matheusfelipeog/in8-test#readme',
+            'routes': [
+                'GET /api/products',
+                'GET /api/products/<int:product_id>'
+            ]
+        }
 
     app.register_blueprint(api.bp)
 

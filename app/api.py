@@ -7,6 +7,16 @@ from app.storage import load_data
 bp = Blueprint('api', __name__, url_prefix='/api')
 
 
+@bp.get('/')
+def index() -> dict:
+    return {
+        'routes': [
+            'GET /api/products',
+            'GET /api/products/<int:product_id>'
+        ]
+    }
+
+
 @bp.get('/products')
 def products() -> list:
     return load_data()
