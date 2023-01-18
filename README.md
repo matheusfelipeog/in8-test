@@ -100,3 +100,10 @@ Os dados do produto retornado pela API:
 - reviews
 - rating
 - url
+
+
+## Fluxo da aplicação
+
+<div align="center">
+    <img src="./assets/images/fluxo-app.png" alt="Fluxo da aplicação" >
+</div>
