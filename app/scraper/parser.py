@@ -62,7 +62,7 @@ def product_hard_drives_price(
     return infos
 
 
-def product_url_image(card: Locator) -> str:
+def product_image(card: Locator) -> str:
     src = card.locator('.img-responsive').get_attribute('src')
     return BASE_URL + str(src)
 

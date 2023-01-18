@@ -10,7 +10,7 @@ from app.scraper.parser import (
     product_name,
     product_description,
     product_hard_drives_price,
-    product_url_image,
+    product_image,
     product_reviews,
     product_rating
 )
@@ -37,7 +37,7 @@ def scraper(page: Page) -> Products:
             'description': desc,
             'prices': infos['prices'],
             'hard_drives': infos['hard_drives'],
-            'url_image': product_url_image(card),
+            'image': product_image(card),
             'reviews': product_reviews(card),
             'rating': product_rating(card),
             'url': product_url(page)
