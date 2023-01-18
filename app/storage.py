@@ -27,4 +27,5 @@ def load_data() -> list:
             data = json.load(file)
     else:
         data = scraper.run()
+        save_data(data)
     return data
