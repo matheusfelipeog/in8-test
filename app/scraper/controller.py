@@ -4,6 +4,7 @@ from playwright.sync_api import sync_playwright
 from app.scraper.config import setup_playwright, teardown_playwright
 from app.scraper.parser import (
     url_products,
+    product_url,
     product_card,
     product_id,
     product_name,
@@ -39,6 +40,7 @@ def scraper(page: Page) -> Products:
             'url_image': product_url_image(card),
             'reviews': product_reviews(card),
             'rating': product_rating(card),
+            'url': product_url(page)
         })
 
     products = order_products(products)

@@ -21,6 +21,10 @@ def url_products(page: Page, brand: str = 'lenovo') -> List[str]:
     return urls
 
 
+def product_url(page: Page) -> str:
+    return page.url
+
+
 def product_card(page: Page) -> Locator:
     return page.locator('.thumbnail')
 
